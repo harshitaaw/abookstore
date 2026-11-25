@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Old Paper & Ink - Magical Literary Sanctuary</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Magical floating particles -->
+    <div class="floating-particles" id="floatingParticles"></div>
+
+    <!-- Enhanced Header -->
+    <header class="enhanced-header">
+        <div class="header-container">
+            <div class="header-content">
+                <!-- Enhanced Logo -->
+                <div class="logo-section">
+                    <div class="logo-group">
+                        <div class="logo-icon-container">
+                            <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <div class="logo-pulse"></div>
+                        </div>
+                        <div class="logo-text-container">
+                            <h1 class="logo-title">The Old Paper & Ink</h1>
+                            <span class="logo-subtitle">Literary Sanctuary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced navigation for larger screens -->
+                <nav class="main-nav">
+                    <button class="nav-btn active" data-category="all">All Books <span class="nav-count"
+                            id="allCount"></span></button>
+                    <button class="nav-btn" data-category="classics">Classics <span class="nav-count"
+                            id="classicsCount"></span></button>
+                    <button class="nav-btn" data-category="thriller">Thriller <span class="nav-count"
+                            id="thrillerCount"></span></button>
+                    <button class="nav-btn" data-category="romance">Romance <span class="nav-count"
+                            id="romanceCount"></span></button>
+                    <button class="nav-btn" data-category="fantasy">Fantasy <span class="nav-count"
+                            id="fantasyCount"></span></button>
+                    <button class="nav-btn" data-category="dark comedy">comedy<span class="nav-count"
+                            id="comedyCount"></span></button>
+                    <button class="nav-btn" data-category="young adult">young adult <span class="nav-count"
+                            id="adultCount"></span></button>
+                    <button class="nav-btn" data-category="self-help">self-help <span class="nav-count"
+                            id="self-helpCount"></span></button>
+                    <button class="nav-btn" data-category="science-fiction">science-fiction<span class="nav-count"
+                            id="fictionCount"></span></button>
+                    <button class="nav-btn" data-category="non-fiction">non-Fiction <span class="nav-count"
+                            id="non-fiction"></span></button>
+
+                </nav>
+
+                <!-- Enhanced action buttons -->
+                <div class="header-actions">
+                    <button class="action-btn theme-toggle" id="themeToggle">
+                        <svg class="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <button class="action-btn cart-btn" id="cartBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slideshow -->
+    <section class="hero-slideshow" id="heroSlideshow">
+        <div class="slide active" data-slide="0">
+            <div class="slide-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&h=1080&fit=crop')">
+            </div>
+            <div class="slide-overlay gradient-purple"></div>
+            <div class="slide-particles"></div>
+            <div class="slide-content">
+                <div class="slide-inner">
+                    <h1 class="slide-title">Enter the Realm of Ancient Wisdom</h1>
+                    <p class="slide-subtitle">Where every page holds the power to transport you</p>
+                    <div class="slide-buttons">
+                        <button class="btn-primary">Explore Collection</button>
+                        <button class="btn-secondary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" data-slide="1">
+            <div class="slide-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop')">
+            </div>
+            <div class="slide-overlay gradient-emerald"></div>
+            <div class="slide-particles"></div>
+            <div class="slide-content">
+                <div class="slide-inner">
+                    <h1 class="slide-title">Discover Worlds Beyond Imagination</h1>
+                    <p class="slide-subtitle">Step through the doorway to infinite adventures</p>
+                    <div class="slide-buttons">
+                        <button class="btn-primary">Explore Collection</button>
+                        <button class="btn-secondary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" data-slide="2">
+            <div class="slide-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1920&h=1080&fit=crop')">
+            </div>
+            <div class="slide-overlay gradient-rose"></div>
+            <div class="slide-particles"></div>
+            <div class="slide-content">
+                <div class="slide-inner">
+                    <h1 class="slide-title">Where Stories Come Alive</h1>
+                    <p class="slide-subtitle">Experience the magic of literary enchantment</p>
+                    <div class="slide-buttons">
+                        <button class="btn-primary">Explore Collection</button>
+                        <button class="btn-secondary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <button class="slide-nav prev" id="prevSlide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="15,18 9,12 15,6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <button class="slide-nav next" id="nextSlide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="9,18 15,12 9,6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Slide indicators -->
+        <div class="slide-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Featured Books Carousel -->
+    <section class="featured-section">
+        <div class="featured-container">
+            <div class="section-header">
+                <h2 class="section-title magical-text">✨ Featured Literary Treasures ✨</h2>
+                <p class="section-subtitle">Discover the most enchanting stories from our collection</p>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-nav prev" id="featuredPrev">‹</button>
+                <div class="featured-carousel" id="featuredCarousel">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+                <button class="carousel-nav next" id="featuredNext">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Search and Filters -->
+    <section class="search-filters">
+        <div class="search-container">
+            <div class="search-header">
+                <h2 class="search-title">Discover Your Next Adventure</h2>
+                <p class="search-subtitle">Search through our magical collection and find stories that will transport
+                    you to other worlds</p>
+            </div>
+
+            <div class="search-controls">
+                <!-- Enhanced search -->
+                <div class="search-input-container">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <input type="text" class="search-input"
+                        placeholder="Search through enchanted realms of literature..." id="searchInput">
+                </div>
+
+                <!-- Enhanced controls -->
+                <div class="control-group">
+                    <select class="sort-select" id="sortSelect">
+                        <option value="title">Sort by Title</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="year">Newest First</option>
+                    </select>
+
+                    <div class="view-toggle">
+                        <button class="view-btn active" id="gridView">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="view-btn" id="listView">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="8" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <line x1="8" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <line x1="8" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <line x1="3" y1="6" x2="3.01" y2="6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <line x1="3" y1="12" x2="3.01" y2="12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <line x1="3" y1="18" x2="3.01" y2="18" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced mobile category filters -->
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">All Books <span class="category-count"
+                        id="allCategoryCount">8</span></button>
+                <button class="category-btn" data-category="classics">Classics <span class="category-count"
+                        id="classicsCategoryCount">3</span></button>
+                <button class="category-btn" data-category="thriller">Thriller <span class="category-count"
+                        id="thrillerCategoryCount">2</span></button>
+                <button class="category-btn" data-category="romance">Romance <span class="category-count"
+                        id="romanceCategoryCount">1</span></button>
+                <button class="category-btn" data-category="fantasy">Fantasy <span class="category-count"
+                        id="fantasyCategoryCount">1</span></button>
+                <button class="category-btn" data-category="science-fiction">Sci-Fi <span class="category-count"
+                        id="scifiCategoryCount">1</span></button>
+                <button class="category-btn" data-category="dark comedy">comedy <span class="category-count"
+                        id="comedyCategoryCount">1</span></button>
+                <button class="category-btn" data-category="young adult">young adult <span class="category-count"
+                        id="adultCategoryCount">2</span></button>
+                <button class="category-btn" data-category="non-fiction">non-fiction <span class="category-count"
+                        id="non-fictionCategoryCount">2</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Books Grid -->
+    <main class="books-main">
+        <div class="books-container">
+            <div class="books-header">
+                <h2 class="books-title" id="booksTitle">Entire Collection</h2>
+                <div class="books-info">
+                    <span class="books-count">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polygon
+                                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span id="booksCount">8</span> magical stories await
+                    </span>
+                </div>
+            </div>
+
+            <div class="books-grid" id="booksGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+            <section class="authors-section">
+                <h2 class="section-title">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4340/4340525.png" width="30" />
+                    Featured Authors
+                </h2>
+                <div class="author-carousel-wrapper">
+                    <button class="author-nav left" id="authorLeft">&#10094;</button>
+                    <div class="author-carousel" id="authorCarousel">
+                        <div class="author-card">
+                            <img src="https://d2g9wbak88g7ch.cloudfront.net/authorimages/william-wordsworth-8.jpg"
+                                alt="William Wordsworth">
+                            <p>William Wordsworth</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://www.bookswagon.com/authorimages/download.jpg" alt="">
+                            <p>John Green </p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://www.bookswagon.com/authorimages/stephen-edwin-king.jpg" alt="">
+                            <p>Stephan King</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://www.bookswagon.com/authorimages/arundhatistory_647_100316054702.jpg"
+                                alt="">
+                            <p>Arundhati Roy</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://www.bookswagon.com/authorimages/dillian.jpg" alt="">
+                            <p>Gillian Flynn</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://www.bookswagon.com/authorimages/sylvia2.jpg" alt="">
+                            <p>Sylvia Plath</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://www.bookswagon.com/authorimages/dr-shashi-tharoor-2.jpg" alt="">
+                            <p>Shashi Tharoor</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZtpuVYmhziyBd2u2OUcZRexwXUR5-TkcqGQ&s"
+                                alt="">
+                            <p>Ava Huang</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg/1200px-Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg"
+                                alt="">
+                            <p>Fyodor Dostoevsky</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="">
+                            <p> Ruskin Bond</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHh_xX-MI_TwOLLZ1c8c041YXJttNcDsEQ7Q&s"
+                                alt="">
+                            <p> Franz Kafka
+                            </p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/8cigckin175jtpsk3gs361r4ss.jpg"
+                                alt="">
+                            <p>Feedback
+                                J. K. Rowling</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://mczellbookwriting.com/blog/wp-content/uploads/2022/07/Kazuo-Ishiguro.jpg"
+                                alt="">
+                            <p>Kazuo Ishiguro</p>
+                        </div>
+                        <div class="author-card">
+                            <img src="https://mczellbookwriting.com/blog/wp-content/uploads/2022/08/George-Saunders.jpg"
+                                alt="">
+                            <p>George Saunders</p>
+                        </div>
+
+                        <!-- Add more author cards here -->
+                    </div>
+                    <button class="author-nav right" id="authorRight">&#10095;</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="enhanced-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">The Old Paper & Ink</h3>
+                    <p class="footer-description">Your gateway to infinite worlds and timeless stories. Where every book
+                        is a journey waiting to begin.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📌</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Book Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Fiction</a></li>
+                        <li><a href="#">Non-Fiction</a></li>
+                        <li><a href="#">Mystery & Thriller</a></li>
+                        <li><a href="#">Romance</a></li>
+                        <li><a href="#">Fantasy & Sci-Fi</a></li>
+                        <li><a href="#">young adult</a></li>
+                        <li><a href="#">comedy</a></li>
+                        <li><a href="#">classics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section newsletter-section">
+                    <h3 class="footer-title">Join Our Literary Circle</h3>
+                    <p class="newsletter-description">Subscribe for book recommendations, exclusive offers, and literary
+                        news.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="auth-buttons">
+                        <button class="auth-btn login-btn" id="loginBtn">Sign In</button>
+                        <button class="auth-btn signup-btn" id="signupBtn">Create Account</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Old Paper & Ink. All rights reserved. Crafted with ❤️ for book lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                Cart (<span id="cartItemsCount">0</span>)
+            </h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <p>Your collection awaits the first book...</p>
+                </div>
+            </div>
+
+            <div class="cart-total" id="cartTotal" style="display: none;">
+                <div class="total-info">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotalAmount">$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping:</span>
+                        <span>Free</span>
+                    </div>
+                    <div class="total-row final">
+                        <span>Total:</span>
+                        <span id="totalAmount">$0.00</span>
+                    </div>
+                </div>
+                <button class="checkout-btn">Complete Your Purchase</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modals -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="auth-modal" id="authModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" style="display: none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="12" y1="19" x2="12" y2="5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <polyline points="5,12 12,5 19,12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
